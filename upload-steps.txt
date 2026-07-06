@@ -1,0 +1,34 @@
+ROBSONS GITHUB UPLOAD STEPS
+
+1. Open this folder:
+   GitHub_Upload_Robsons_READY
+
+2. Select everything inside this folder.
+
+3. Copy or drag these files into your GitHub repository:
+   - index.html
+   - preview.html
+   - README.md
+   - CNAME
+   - .nojekyll
+   - ROBSONS_Property_Website_Starter folder
+
+4. In GitHub, go to:
+   Settings > Pages
+
+5. Use:
+   Source: Deploy from a branch
+   Branch: main
+   Folder: / (root)
+
+6. Custom domain:
+   robsonsholding.company
+
+7. In your domain DNS, add GitHub Pages A records:
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+8. After GitHub verifies the domain, enable:
+   Enforce HTTPS
