@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robsons Biz Solutions is a local online store and eCommerce marketplace for customers across Papua New Guinea.">
+  <title>Robsons Biz Solutions | PNG Online Store</title>
+  <link rel="stylesheet" href="/robsons_property_website_starter/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Robsons Biz Solutions home">
+        <img class="brand-logo" src="/robsons_property_website_starter/assets/robsons-biz-logo.png" alt="Robsons Biz Solutions logo">
+        <span class="brand-text">
+          <strong>ROBSONS</strong>
+          <span>BIZ SOLUTIONS</span>
+          <small>Your Trusted Local Online Store in Papua New Guinea</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#new-arrivals">New Arrivals</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#track">Track Order</a>
+        <a href="#admin">Admin</a>
+      </div>
+
+      <button class="cart-button" type="button" id="cartButton" aria-label="Open cart">
+        <span>Cart</span>
+        <strong id="cartCount">0</strong>
+      </button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Robsons Biz Solutions marketplace">
+      <div class="hero-copy">
+        <p class="eyebrow">PNG wide online shopping</p>
+        <h1>Shop Quality Products Delivered Across Papua New Guinea</h1>
+        <p>Order bags, shoes, clothing, electronics, beauty items, school supplies, watches, and home essentials from one trusted local store.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#shop">Shop Now</a>
+          <a class="button button-secondary" href="#catalog-source">Connect Catalog</a>
+        </div>
+      </div>
+      <div class="hero-showcase" aria-label="Featured shopping categories">
+        <article>
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Ladies handbag">
+          <span>Bags</span>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Running shoes">
+          <span>Shoes</span>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=700&q=80" alt="Laptop and electronics">
+          <span>Electronics</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Why customers shop with Robsons">
+      <article>
+        <strong>Fast Delivery</strong>
+        <span>Standard and express options</span>
+      </article>
+      <article>
+        <strong>PNG Wide Shipping</strong>
+        <span>Province-based delivery rates</span>
+      </article>
+      <article>
+        <strong>Secure Payments</strong>
+        <span>BSP, MiBank, Kina Bank and COD</span>
+      </article>
+      <article>
+        <strong>Customer Support</strong>
+        <span>WhatsApp, phone, and email</span>
+      </article>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading">
+        <p class="eyebrow">Categories</p>
+        <h2>Browse Popular Departments</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <p class="eyebrow">Shop</p>
+        <h2>Products Available Now</h2>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters" aria-label="Product filters">
+          <label for="searchInput">Search Products</label>
+          <input id="searchInput" type="search" placeholder="Search name, brand, SKU">
+
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter"></select>
+
+          <label for="priceFilter">Price</label>
+          <select id="priceFilter">
+            <option value="all">All prices</option>
+            <option value="0-100">K0 - K100</option>
+            <option value="100-250">K100 - K250</option>
+            <option value="250-500">K250 - K500</option>
+            <option value="500-999999">K500+</option>
+          </select>
+
+          <label for="brandFilter">Brand</label>
+          <select id="brandFilter"></select>
+
+          <label for="availabilityFilter">Availability</label>
+          <select id="availabilityFilter">
+            <option value="all">All stock</option>
+            <option value="in_stock">In stock</option>
+            <option value="low_stock">Low stock</option>
+            <option value="out_of_stock">Out of stock</option>
+          </select>
+        </aside>
+
+        <div class="products-area">
+          <div class="shop-toolbar">
+            <p id="productStatus">Loading products...</p>
+            <select id="sortFilter" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest</option>
+              <option value="price_asc">Price: low to high</option>
+              <option value="price_desc">Price: high to low</option>
+            </select>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split-section" id="new-arrivals">
+      <div>
+        <p class="eyebrow">New Arrivals</p>
+        <h2>Fresh Stock for Everyday PNG Customers</h2>
+        <p>Start with fast-moving products, then expand into a bigger marketplace as supplier relationships grow.</p>
+      </div>
+      <div class="arrival-grid" id="arrivalGrid"></div>
+    </section>
+
+    <section class="section checkout-section" id="checkout">
+      <div class="section-heading">
+        <p class="eyebrow">Checkout</p>
+        <h2>Customer Order Details</h2>
+      </div>
+      <form class="checkout-form" id="checkoutForm">
+        <div class="form-grid">
+          <label>Full Name <input name="fullName" required></label>
+          <label>Phone Number <input name="phone" type="tel" required></label>
+          <label>Email <input name="email" type="email"></label>
+          <label>Province
+            <select name="province" id="provinceSelect" required></select>
+          </label>
+          <label>District <input name="district" required></label>
+          <label>Delivery Address <input name="address" required></label>
+          <label>Delivery Method
+            <select name="delivery" id="deliverySelect">
+              <option value="standard">Standard Delivery</option>
+              <option value="express">Express Delivery</option>
+            </select>
+          </label>
+          <label>Payment
+            <select name="payment">
+              <option>BSP Bank Transfer</option>
+              <option>MiBank</option>
+              <option>Kina Bank</option>
+              <option>Mobile Banking</option>
+              <option>Cash on Delivery</option>
+            </select>
+          </label>
+        </div>
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div id="checkoutItems">Your cart is empty.</div>
+          <dl>
+            <div><dt>Products</dt><dd id="subtotalAmount">K0</dd></div>
+            <div><dt>Shipping</dt><dd id="shippingAmount">K0</dd></div>
+            <div><dt>Total</dt><dd id="totalAmount">K0</dd></div>
+          </dl>
+          <button class="button button-primary" type="submit">Send Order</button>
+          <a class="button button-whatsapp" id="whatsappOrder" href="https://wa.me/67574447170" target="_blank" rel="noopener">WhatsApp Order</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="section dashboard-section" id="admin">
+      <div class="section-heading">
+        <p class="eyebrow">Admin Dashboard</p>
+        <h2>Manage Sales, Orders, Products, and Inventory</h2>
+      </div>
+      <div class="metric-grid">
+        <article><span>Sales</span><strong id="metricSales">K0</strong></article>
+        <article><span>Orders</span><strong id="metricOrders">0</strong></article>
+        <article><span>Customers</span><strong>0</strong></article>
+        <article><span>Products</span><strong id="metricProducts">0</strong></article>
+        <article><span>Low Stock</span><strong id="metricLowStock">0</strong></article>
+      </div>
+
+      <div class="admin-grid">
+        <form class="manager-form">
+          <h3>Add Product</h3>
+          <label>Product Name <input placeholder="Ladies Fashion Bag"></label>
+          <label>Price <input placeholder="180"></label>
+          <label>Sale Price <input placeholder="150"></label>
+          <label>Description <textarea rows="3" placeholder="Short product description"></textarea></label>
+          <label>Category <input placeholder="Bags"></label>
+          <label>Image URL <input placeholder="https://..."></label>
+          <label>Stock Quantity <input placeholder="15"></label>
+          <label>SKU <input placeholder="RBS-BAG-001"></label>
+          <button class="button button-secondary" type="button">Publish</button>
+        </form>
+
+        <div class="admin-panel" id="catalog-source">
+          <h3>Product Catalog Source</h3>
+          <p class="admin-note">Upload images to Cloudinary, Google Drive, Facebook, or your website folder, then paste public image URLs into the spreadsheet.</p>
+          <label for="sheetUrlInput">Published Google Sheet CSV URL</label>
+          <input id="sheetUrlInput" type="url" placeholder="https://docs.google.com/spreadsheets/.../pub?output=csv">
+          <div class="admin-actions">
+            <button class="button button-primary" id="saveSheetUrl" type="button">Save Link</button>
+            <a class="button button-secondary" href="/robsons_property_website_starter/products.csv" download>Download CSV</a>
+          </div>
+          <p id="sheetStatus">Connected to the Robsons Google Sheet product catalog.</p>
+        </div>
+
+        <div class="admin-panel">
+          <h3>Orders</h3>
+          <ul class="status-list">
+            <li><span>Pending</span><strong id="ordersPending">0</strong></li>
+            <li><span>Paid</span><strong>0</strong></li>
+            <li><span>Shipped</span><strong>0</strong></li>
+            <li><span>Delivered</span><strong>0</strong></li>
+            <li><span>Cancelled</span><strong>0</strong></li>
+          </ul>
+        </div>
+
+        <div class="admin-panel">
+          <h3>Inventory</h3>
+          <div id="inventoryList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-section" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Built for Local PNG Commerce</h2>
+        <p>Robsons Biz Solutions can source products from suppliers, hold selected stock, and use this marketplace as both an online store and a live eCommerce demo for future website clients.</p>
+      </div>
+      <div class="shipping-panel">
+        <h3>Shipping Examples</h3>
+        <ul>
+          <li><span>Lae</span><strong>K15</strong></li>
+          <li><span>Port Moresby</span><strong>K25</strong></li>
+          <li><span>Mt Hagen</span><strong>K30</strong></li>
+          <li><span>Kimbe</span><strong>K35</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section track-section" id="track">
+      <div class="section-heading">
+        <p class="eyebrow">Track Order</p>
+        <h2>Check Order Status</h2>
+      </div>
+      <form class="track-form">
+        <input placeholder="Enter order number">
+        <button class="button button-primary" type="button">Track</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button type="button" id="closeCart" aria-label="Close cart">Close</button>
+    </div>
+    <div id="cartItems" class="cart-items">Your cart is empty.</div>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">K0</strong>
+    </div>
+    <a class="button button-primary" href="#checkout" id="checkoutLink">Checkout</a>
+  </aside>
+
+  <dialog class="product-dialog" id="productDialog">
+    <button class="dialog-close" id="closeProductDialog" type="button" aria-label="Close product">Close</button>
+    <div id="productDialogContent"></div>
+  </dialog>
+
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <div>
+        <a class="brand footer-brand" href="#home" aria-label="Robsons Biz Solutions home">
+          <img class="brand-logo" src="/robsons_property_website_starter/assets/robsons-biz-logo.png" alt="Robsons Biz Solutions logo">
+          <span class="brand-text">
+            <strong>ROBSONS</strong>
+            <span>BIZ SOLUTIONS</span>
+            <small>Your Trusted Local Online Store in Papua New Guinea</small>
+          </span>
+        </a>
+        <p>Affordable products, reliable delivery, and practical eCommerce solutions for PNG businesses.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#admin">Admin</a>
+        <a href="#track">Track Order</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="#about">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:info@robsonsbiz.com">Email</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Phone: <a href="tel:+67574447170">7444 7170</a></p>
+        <p>WhatsApp: <a href="https://wa.me/67574447170" target="_blank" rel="noopener">Message Robsons</a></p>
+        <p>Lae, Morobe Province<br>Papua New Guinea</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Robsons Biz Solutions. All Rights Reserved.</p>
+      <p>PNG local online store and eCommerce demo platform.</p>
+    </div>
+  </footer>
+
+  <script src="/robsons_property_website_starter/products.js"></script>
+</body>
+</html>
